@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-paper text-ink font-sans antialiased; }
+  html[lang='ar'] body { font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', system-ui, sans-serif; }
+  :focus-visible { outline: 2px solid #0B5D52; outline-offset: 2px; }
+}
+@layer components {
+  .field { @apply w-full rounded-md border border-line bg-white px-3 py-2.5 text-base text-ink placeholder:text-muted/70; }
+  .field-error { @apply border-loss; }
+  .btn { @apply inline-flex items-center justify-center rounded-md px-4 py-2.5 text-sm font-medium transition-colors; }
+}
